@@ -16,7 +16,9 @@ public class JeuGladiateurs {
     AffichageEcran affichage = new AffichageEcran();
     Personnage bob = new Personnage("Bob le malchanceux", 15, 15, 70, 1);
     Personnage igor = new Personnage("Igor l'empaleur", 25, 5, 100, 3);
-    affichage.afficherDebutCombat();    
+    affichage.afficherDebutCombat();   
+    
+
     
     // </editor-fold>
 
