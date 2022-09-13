@@ -26,6 +26,8 @@ public class Personnage {
         valeurMaxAttaque = attaqueMax;
         valeurDefense = defense;
         initiative = ini;
+        
+        afficherInfosPersonnage();
     }
 
     public Personnage() {
@@ -93,8 +95,21 @@ public class Personnage {
     // <editor-fold defaultstate="collapsed" desc="Mécanique de jeu">
     public void afficherInfosPersonnage() {
         // TODO : Afficher les infos du personnage, tel que montré dans l'énoncé
-        Personnage bob = new Personnage("Bob le malchanceux", 15, 15, 70, 15);
-        Personnage igor = new Personnage("Igor l'empaleur", 25, 5, 100, 30);
+        
+        System.out.println("");
+        System.out.println(getNom());
+        System.out.println("    Attaque : " + getValeurMaxAttaque());
+        System.out.println("    Defense : " + getValeurDefense());
+        System.out.println("    Points de vie : " + getPointsDeVie());
+        System.out.println("    Initiative : " + getInitiative()); 
+        
+        if (pointsDeVie <= 0) {
+            System.out.println("    Statue : Mort" );
+        }
+        else{
+            System.out.println("    Statue : Vivant" );
+        }
+            
     }
 
     private int attaqueCalcul() {
