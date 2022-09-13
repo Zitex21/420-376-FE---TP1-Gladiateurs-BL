@@ -18,6 +18,7 @@ public class JeuGladiateurs {
     Personnage igor = new Personnage("Igor l'empaleur", 25, 5, 100, 3);
     affichage.afficherDebutCombat();
     
+
     // </editor-fold>
 
     // **************************************************************************
