@@ -18,7 +18,26 @@ public class JeuGladiateurs {
         Personnage igor = new Personnage("Igor l'empaleur", 25, 5, 100, 3);
         affichage.afficherDebutCombat();
 
-
+        for (int i = 0; i < 100; i++) {
+            
+            if (bob.getPointsDeVie() > 0 && igor.getPointsDeVie() > 0) {
+                
+                tour.afficheTour();
+                bob.frapperPersonnage(igor);
+                igor.frapperPersonnage(bob);
+                affichage.afficherSeparateurInfosPerso();
+                bob.afficherInfosPersonnage();
+                igor.afficherInfosPersonnage();
+                bob.setNewInitiativeRandom();
+                igor.setNewInitiativeRandom();
+                tour.augmenteTour();
+                affichage.afficherSeparateurDeTour();
+            }
+            else{
+                i = 100;
+                affichage.afficheVictoire(bob, igor);
+            }
+        }
 
         // </editor-fold>
         // **************************************************************************

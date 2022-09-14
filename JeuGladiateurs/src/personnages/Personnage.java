@@ -125,18 +125,18 @@ public class Personnage {
         int forceDeFrappe = attaqueCalcul();
         int valeurDefense = personnageCible.getValeurDefense();
         int dommages = forceDeFrappe - valeurDefense;
-        
+
         if (dommages < 0) {
             dommages = 0;
         }
         personnageCible.setPointsDeVie(pointsDeVie - dommages);
-        
         if (personnageCible.getPointsDeVie() < 0) {
             personnageCible.setPointsDeVie(0);
+            
         }
+
         //modifier les points de vie du personnage cible, afficher les détails
         // sur l'attaque, tel que montré dans l'énoncé.
-        
         System.out.println();
         System.out.println(Personnage.this.getNom() + " attaque avec une puissance de : " + forceDeFrappe);
         System.out.println(personnageCible.getNom() + " a une defense de : " + valeurDefense);
