@@ -19,12 +19,17 @@ public class JeuGladiateurs {
         affichage.afficherDebutCombat();
 
         for (int i = 0; i < 100; i++) {
-            
+
             if (bob.getPointsDeVie() > 0 && igor.getPointsDeVie() > 0) {
-                
+
                 tour.afficheTour();
-                bob.frapperPersonnage(igor);
-                igor.frapperPersonnage(bob);
+                if (bob.getInitiative() < igor.getInitiative()) {
+                    igor.frapperPersonnage(bob);
+                    bob.frapperPersonnage(igor);
+                } else {
+                    bob.frapperPersonnage(igor);
+                    igor.frapperPersonnage(bob);
+                }
                 affichage.afficherSeparateurInfosPerso();
                 bob.afficherInfosPersonnage();
                 igor.afficherInfosPersonnage();
@@ -32,8 +37,7 @@ public class JeuGladiateurs {
                 igor.setNewInitiativeRandom();
                 tour.augmenteTour();
                 affichage.afficherSeparateurDeTour();
-            }
-            else{
+            } else {
                 i = 100;
                 affichage.afficheVictoire(bob, igor);
             }

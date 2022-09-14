@@ -129,10 +129,13 @@ public class Personnage {
         if (dommages < 0) {
             dommages = 0;
         }
-        personnageCible.setPointsDeVie(pointsDeVie - dommages);
+        if (Personnage.this.getPointsDeVie() > 0) {
+         personnageCible.setPointsDeVie(pointsDeVie - dommages);   
+        }
+        
         if (personnageCible.getPointsDeVie() < 0) {
             personnageCible.setPointsDeVie(0);
-            
+
         }
 
         //modifier les points de vie du personnage cible, afficher les détails
