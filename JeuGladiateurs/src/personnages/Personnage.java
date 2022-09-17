@@ -14,19 +14,21 @@ public class Personnage {
     private int valeurMaxAttaque;
     private int valeurDefense;
     private int initiative;
+    private String genre;
 
     // </editor-fold>
     // **************************************************************************
     // **************************************************************************
     // **************************************************************************
     // <editor-fold defaultstate="collapsed" desc="Constructeurs et initialisation">
-    public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini) {
+    public Personnage(String nom, int attaqueMax, int defense, int pvs, int ini, String genre) {
         // TODO : Constructeur AVEC paramètres
         this.nom = nom;
         pointsDeVie = pvs;
         valeurMaxAttaque = attaqueMax;
         valeurDefense = defense;
         initiative = ini;
+        this.genre = genre;
 
         afficherInfosPersonnage();
     }
@@ -38,9 +40,19 @@ public class Personnage {
         valeurMaxAttaque = 0;
         valeurDefense = 0;
         initiative = 0;
+        genre = "";
     }
 
     // </editor-fold>
+        
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+    
     public String getNom() {
         return nom;
     }
@@ -101,6 +113,7 @@ public class Personnage {
         System.out.println("    Defense : " + getValeurDefense());
         System.out.println("    Points de vie : " + getPointsDeVie());
         System.out.println("    Initiative : " + getInitiative());
+        System.out.println("    Genre : " + getGenre());
 
         if (pointsDeVie <= 0) {
             System.out.println("    Statue : Mort");
@@ -125,6 +138,8 @@ public class Personnage {
         int forceDeFrappe = attaqueCalcul();
         int valeurDefense = personnageCible.getValeurDefense();
         int dommages = forceDeFrappe - valeurDefense;
+        
+        
 
         if (dommages < 0) {
             dommages = 0;

@@ -3,6 +3,7 @@ package jeugladiateurs;
 import personnages.Personnage;
 import combat.CompteurDeTour;
 import combat.AffichageEcran;
+import personnages.mirmillon;
 
 public class JeuGladiateurs {
 
@@ -14,9 +15,12 @@ public class JeuGladiateurs {
         // <editor-fold defaultstate="collapsed" desc="Instanciation des objets">
         CompteurDeTour tour = new CompteurDeTour();
         AffichageEcran affichage = new AffichageEcran();
-        Personnage bob = new Personnage("Bob le malchanceux", 15, 15, 70, 1);
-        Personnage igor = new Personnage("Igor l'empaleur", 25, 5, 100, 3);
+//        Personnage bob = new Personnage("Bob le malchanceux", 15, 15, 70, 1, "mirmillon");
+        Personnage igor = new Personnage("Igor l'empaleur", 25, 5, 100, 3, "retiaire");
         affichage.afficherDebutCombat();
+        mirmillon bob = new mirmillon("Bob le malchanceux", 15, 15, 70);
+        
+        
 
         for (int i = 0; i < 100; i++) {
 
