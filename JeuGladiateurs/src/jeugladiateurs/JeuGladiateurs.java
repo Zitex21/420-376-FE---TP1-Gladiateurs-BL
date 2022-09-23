@@ -15,7 +15,7 @@ public class JeuGladiateurs {
         // **************************************************************************
         // **************************************************************************
         // **************************************************************************
-        // <editor-fold defaultstate="collapsed" desc="Instanciation des objets">
+        // <CompteurDeToureditor-fold defaultstate="collapsed" desc="Instanciation des objets">
         CompteurDeTour tour = new CompteurDeTour();
         AffichageEcran affichage = new AffichageEcran();
 //        Personnage bob = new Personnage("Bob le malchanceux", 15, 15, 70, 1, "mirmillon");
