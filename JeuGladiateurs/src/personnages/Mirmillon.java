@@ -15,6 +15,7 @@ public class Mirmillon extends Personnage {
     public Mirmillon(String nom, int attaqueMax, int defense, int pvs) {
 
         super(nom, attaqueMax, defense, pvs, 30, "Mirmillon");
+        //test
 
     }
 
